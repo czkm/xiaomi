@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Mine from '../pages/Mine/Mine.vue'
 import Classify from '../pages/Classify/Classify.vue'
 import Shopping from '../pages/Shopping/Shopping.vue'
+import Login from '@/pages/Login/Login.vue'
 import Home from '../pages/Home/Home.vue'
 Vue.use(Router)
 
@@ -27,6 +28,10 @@ export default new Router({
     {
       path: '/mine',
       component: Mine
+    },
+    {
+      path: '/login',
+      component: Login
     }
   ]
 })

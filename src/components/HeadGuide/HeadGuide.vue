@@ -5,10 +5,10 @@
         </div>
        <div class="head_search">
             <div class="head_middle">
-                <div class="item_icon">
-                    <i class="iconfont icon-sousuo" ></i>
+                <div class="item_icon ">
+                    <i class="iconfont icon-sousuo" style="padding-left:10px"></i>
                 </div>
-                <input type="text" placeholder="请输入关键字">
+                <input type="text" placeholder="    请输入关键字">
             </div>
        </div>
        <div class="head_user">
@@ -25,7 +25,7 @@ export default {}
 @import "../../common/stylus/mixins.styl"
   .headguide
     background-color #fff
-    bottom-border-1px(#e4e4e4)
+    bottom-border-1px(#f5f5f5)
     position fixed
     z-index 100
     left 0
@@ -34,11 +34,13 @@ export default {}
     height 45px
     .head_search
       position fixed
-      width 200px
+      width 60%
+      overflow hidden
+      display flex
       height 30px
       float left
       margin-left 65px
-      margin-top 13px
+      margin-top 10px
     .head_logo
       z-index 10
       position fixed
@@ -52,7 +54,7 @@ export default {}
       width 26px
       height 26px
       float right
-      margin-right 20px
+      margin-right 15px
       margin-top 14px
     .head_middle
       display flex

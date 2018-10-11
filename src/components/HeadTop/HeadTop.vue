@@ -1,0 +1,65 @@
+<template>
+    <div class="headguide">
+          <div class="item_icon left_icon" >
+            <i class="iconfont icon-jiantou1" ></i>
+        </div>
+            <div class="middle">
+                <div class="head_txt">{{title}}</div>
+            </div>
+         <div class="item_icon right_icon" >
+            <i class="iconfont icon-sousuo" ></i>
+        </div>
+   </div>
+</template>
+
+<script type="text/ecmascript-6">
+export default {
+  props: {
+    title: String
+  }
+}
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus" >
+@import "../../common/stylus/mixins.styl"
+   .headguide
+    background-color #fff
+    bottom-border-1px(#f5f5f5)
+    position fixed
+    z-index 100
+    left 0
+    top 0
+    width 100%
+    height 45px
+    background-color #f2f2f2
+    .left_icon
+      display block
+      float left
+      padding-left 20px
+      line-height 45px
+      width 20px
+    .middle
+      display flex
+      align-items center
+      text-align center
+      vertical-align inherit
+      // float left
+      width 50%
+      height 45px
+      margin 0 auto
+      border 0
+      background-color #f2f2f2
+      .head_txt
+        text-align center
+        margin 0 auto
+    .right_icon
+      display block
+      float right
+      padding-right 20px
+      line-height 45px
+      margin-top -45px
+      width 20px
+      .iconfont
+        width 22px
+        height 22px
+</style>

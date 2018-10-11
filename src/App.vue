@@ -1,7 +1,6 @@
 <template>
    <div class="app">
      app测试
-     <HeadGuide></HeadGuide>
      <router-view></router-view>
      <FootGuide></FootGuide>
    </div>
