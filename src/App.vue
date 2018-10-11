@@ -1,6 +1,6 @@
 <template>
    <div class="app">
-     apps
+     appsces
      <HeadGuide></HeadGuide>
      <router-view></router-view>
      <FootGuide></FootGuide>
