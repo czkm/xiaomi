@@ -1,74 +1,51 @@
-// $color-background = #222
-// $color-background-d = rgba(0, 0, 0, 0.3)
-// $color-highlight-background = #333
-// $color-dialog-background = #666
-// $color-theme = #ffcd32
-// $color-theme-d = rgba(255, 205, 49, 0.5)
-// $color-sub-theme = #d93f30
-// $color-text = #fff
-// $color-text-d = rgba(255, 255, 255, 0.3)
-// $color-text-l = rgba(255, 255, 255, 0.5)
-// $color-text-ll = rgba(255, 255, 255, 0.8)
-
-
-//这里是负责1像素边框问题  下边框
-bottom-border-1px($color) //stylus的mixins语法支持传入变量
-  position relative //创建相对定位布局,为after和before的border的绝对布局做定位
-  border none 
-  &::after //使用伪元素::after,在元素之后插入内容
-    display block
+// 一像素下边框
+bottom-border-1px($color)
+  position relative
+  border none
+  &:after
+    content ''
     position absolute
     left 0
     bottom 0
-    width 100% //需要横向撑开边框宽度
+    width 100%
     height 1px
-    // border-top: 1px solid $color //因为是在元素之后插入,所以是用上边框
     background-color $color
     transform scaleY(0.5)
-    content ' ' //after或者before使用的时候,不传入东西也要填一个空字符串
 
-    //这里是负责1像素边框问题  上边框
-top-border-1px($color) 
-  position relative 
-  border none 
-  &::before 
-    z-index 200
+// 一像素上边框
+top-border-1px($color)
+  position relative
+  &::before
+    content ''
     position absolute
+    z-index 200
     left 0
     top 0
-    width 100% 
+    width 100%
     height 1px
     background-color $color
-    content ' ' 
 
-// /*设备像素比*/
-// @media only screen and (-webkit-device-pixel-ratio: 2.0) 
-//     .border-1px
-//          &::before 
-//             transform: scaleY(0.5)
-//       
-//     
+//根据像素比缩放1px像素边框
+@media only screen and (-webkit-device-pixel-ratio: 2 )
+  .border-1px
+    &::before
+      transform scaleY(.5)
 
-// @media only screen and (-webkit-device-pixel-ratio: 3.0)
-//     .border-1px
-//          &::before 
-//             transform: scaleY(0.33333)
-//     
+@media only screen and (-webkit-device-pixel-ratio: 3 )
+  .border-1px
+    &::before
+      transform scaleY(.333333)
 
-
-
-
-//这里是负责图片的不同dpr下显示高清问题
-bg-image($url) //这是图片的mixin,也是类似,不过这里是图片根据dpr来进行适配
+//根据像素比来使用 2x图 3x图
+bg-image($url)
   background-image: url($url + "@2x.png")
   @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
     background-image: url($url + "@3x.png")
 
-
-clearfix()
+//清除浮动
+clearFix()
   *zoom 1
-  &:after 
-    content " "
-    display block 
+  &::after
+    content ''
+    display block
     clear both
-  

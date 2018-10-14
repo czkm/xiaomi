@@ -10,12 +10,15 @@
             <div class="swiper-pagination"></div>
         </div>
         <HomeList></HomeList>
+        <ImgList></ImgList>
+
    </div>
 </template>
 
 <script type="text/ecmascript-6">
 import HeadGuide from '@/components/HeadGuide/HeadGuide'
 import HomeList from '@/pages/Home/HomeList'
+import ImgList from '@/components/ImgList/ImgList'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 /* eslint-disable */ 
@@ -32,7 +35,8 @@ export default {
   },
   components: {
     HeadGuide,
-    HomeList
+    HomeList,
+    ImgList
   }
 }
 </script>

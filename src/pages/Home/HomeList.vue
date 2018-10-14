@@ -17,11 +17,9 @@ export default { }
  .homelist
    height 75px
    top-border-1px(#f5f5f5)
-   bottom-border-1px(#f5f5f5)
    .home_list
      float left
-     width 75px
-     height 75px
+     width 20%
      .list_img
        width 100%
        height 100%

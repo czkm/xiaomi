@@ -1,29 +1,30 @@
 <template>
-   <div class="headguide">
-        <div class="head_logo">
-            <img class="logo" src="./img/logo.png" alt="">
+  <header class="HeaderGuide">
+    <!-- 插槽是父组件与子组件的通讯方式，子组件中的slot可以显示父组件传递给子组件的内容 -->
+        <div class=" left_icon" >
+          <div class="">
+            <img class="iconfont_left" src="./img/logo.png" alt="">
+          </div>
         </div>
-       <div class="head_search">
-            <div class="head_middle">
-                <div class="item_icon ">
-                    <i class="iconfont icon-sousuo" style="padding-left:10px"></i>
-                </div>
-                <input type="text" placeholder="    请输入关键字">
-            </div>
-       </div>
-       <div class="head_user">
-             <img class="user" src="./img/user.png" alt="">
-       </div>
-   </div>
+    <div class="header_middle item_icon">
+            <i class="iconfont  icon-sousuo search_img" ></i>
+        <input class="header_search"  placeholder="搜索商品名称">
+    </div>
+    <div class=" right_icon" >
+            <img class="iconfont_right" src="./img/user.png" alt="">
+        </div>
+  </header>
 </template>
 
-<script type="text/ecmascript-6">
-export default {}
+<script>
+export default {
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
 @import "../../common/stylus/mixins.styl"
-  .headguide
+  .HeaderGuide
+    overflow hidden
     background-color #fff
     bottom-border-1px(#f5f5f5)
     position fixed
@@ -32,42 +33,53 @@ export default {}
     top 0
     width 100%
     height 45px
-    .head_search
-      position fixed
-      width 60%
-      overflow hidden
-      display flex
-      height 30px
-      float left
-      margin-left 65px
-      margin-top 10px
-    .head_logo
-      z-index 10
-      position fixed
-      float right
-      margin-left 20px
-      margin-top 14px
-    .logo
-      width 80%
-      height 25px
-    .user
-      width 26px
-      height 26px
-      float right
-      margin-right 15px
-      margin-top 14px
-    .head_middle
-      display flex
-      align-items: center
-      border 1px solid #e5e5e5
-      text-align left
+    background-color #f2f2f2
+    .iconfont_left
       width 100%
-      color rgba(0,0,0,.3)
-      background-color #fff
-    //   float left
-    //   margin-left 80px
-    //   .iconfont
-    //     font-size 22px
-    //     color #fff
-    // .h
+      height 100%
+      max-width 100px
+      padding-top 10px
+    .iconfont_right
+      width 70%
+      height 70%
+      max-width 100px
+      padding-top 10px
+      margin-left 10px
+    .left_icon
+      display block
+      float left
+      line-height 45px
+      width 10%
+      margin 0 auto
+      height 45px
+      padding-left 10px
+    .right_icon
+      display block
+      float right
+      line-height 45px
+      width 10%
+      height 45px
+      padding-right  10px
+    .header_middle
+      float left
+      display block
+      align-items center
+      text-align center
+      vertical-align inherit
+      // float left
+      width 60%
+      height 45px
+      margin 0 auto
+      padding 0 10px 0 10px
+      background-color #f2f2f2
+      position relative
+      .search_img
+        width 20px
+        height 20px
+        position absolute
+        top 30%
+      .header_search
+        width 100%
+        height 100%
+        padding-left 30px
 </style>
