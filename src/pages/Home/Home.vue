@@ -1,24 +1,12 @@
 <template>
    <div>
-        <HeadGuide></HeadGuide>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="slide_img" src="@/components/Slider/img/bg.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="slide_img" src="@/components/Slider/img/bg2.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="slide_img" src="@/components/Slider/img/bg5.jpg" alt=""></div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <HomeList></HomeList>
-        <ImgList></ImgList>
-
+        <HeadTable></HeadTable>
+        <router-view></router-view>
    </div>
 </template>
 
 <script type="text/ecmascript-6">
-import HeadGuide from '@/components/HeadGuide/HeadGuide'
-import HomeList from '@/pages/Home/HomeList'
-import ImgList from '@/components/ImgList/ImgList'
+import HeadTable from '@/components/HeadTable/HeadTable'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 /* eslint-disable */ 
@@ -34,9 +22,7 @@ export default {
     })
   },
   components: {
-    HeadGuide,
-    HomeList,
-    ImgList
+    HeadTable
   }
 }
 </script>

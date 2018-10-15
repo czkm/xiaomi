@@ -22,12 +22,11 @@ export default { }
  .mylogin
    overflow hidden
    bottom-border-1px(#f5f5f5)
-   top 0
-   height 100px
-   background-color #f37d0f
+   height 100%
+   background-color #f5f5f5
    .login_top
      position relative
-     height 100px
+     height 80px
      width 100%
      background-color #f37d0f
      display block
@@ -42,7 +41,7 @@ export default { }
          width 50px
          height 50px
          float left
-         padding-left 20px
+         margin-left 20px
        .login_img
          width 100%
          height 100%

@@ -57,14 +57,11 @@ export default {
       text-align center
       flex-direction column
       align-items center
-      margin 5px
       color #999999
       &.on
         color #ff6700
       span
         font-size 12px
-        margin-top 2px
-        margin-bottom 2px
         .iconfont
           font-size 22px
 </style>

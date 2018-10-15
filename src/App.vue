@@ -1,6 +1,6 @@
 <template>
    <div class="app">
-     app测试
+     <HeadGuide></HeadGuide>
      <router-view></router-view>
      <FootGuide></FootGuide>
    </div>
@@ -18,10 +18,5 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-.app {
-  width: 100%;
-  height: 100%;
-  background: #f5f5f5;
-}
 
 </style>

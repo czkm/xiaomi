@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
     "fastclick": "^1.0.6",
+    "popper.js": "^1.14.4",
     "swiper": "^4.4.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
@@ -56,6 +58,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
+    "jquery": "^3.3.1",
     "nightwatch": "^0.9.12",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",

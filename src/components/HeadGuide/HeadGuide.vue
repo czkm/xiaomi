@@ -1,7 +1,6 @@
 <template>
-  <header class="HeaderGuide">
-    <!-- 插槽是父组件与子组件的通讯方式，子组件中的slot可以显示父组件传递给子组件的内容 -->
-        <div class=" left_icon" >
+  <div class="HeaderGuide">
+    <div class=" left_icon">
           <div class="">
             <img class="iconfont_left" src="./img/logo.png" alt="">
           </div>
@@ -13,7 +12,7 @@
     <div class=" right_icon" >
             <img class="iconfont_right" src="./img/user.png" alt="">
         </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -38,13 +37,10 @@ export default {
       width 100%
       height 100%
       max-width 100px
-      padding-top 10px
     .iconfont_right
-      width 70%
-      height 70%
+      width 50%
+      height 50%
       max-width 100px
-      padding-top 10px
-      margin-left 10px
     .left_icon
       display block
       float left
@@ -59,7 +55,6 @@ export default {
       line-height 45px
       width 10%
       height 45px
-      padding-right  10px
     .header_middle
       float left
       display block
@@ -67,7 +62,7 @@ export default {
       text-align center
       vertical-align inherit
       // float left
-      width 60%
+      width 80%
       height 45px
       margin 0 auto
       padding 0 10px 0 10px
@@ -78,6 +73,7 @@ export default {
         height 20px
         position absolute
         top 30%
+        padding-left 10px
       .header_search
         width 100%
         height 100%

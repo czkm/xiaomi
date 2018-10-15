@@ -1,16 +1,19 @@
 <template>
   <div class="headtab">
-    <router-link tag="div" class="tab-item" to="/recommend">
+    <router-link  tag="div" class="tab-item" to="/home/recommend">
         <span class="tab-link">推荐</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/singer">
-        <span class="tab-link">歌手</span>
+    <router-link tag="div" class="tab-item" to="/home/phone">
+        <span class="tab-link">手机</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/rank">
-        <span class="tab-link">排行</span>
+    <router-link tag="div" class="tab-item" to="/home/tv">
+        <span class="tab-link">电视</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/search">
-        <span class="tab-link">搜索</span>
+    <router-link tag="div" class="tab-item" to="/home/intelligent">
+        <span class="tab-link">智能</span>
+    </router-link>
+    <router-link tag="div" class="tab-item" to="/home/laptop">
+        <span class="tab-link">笔记本</span>
     </router-link>
   </div>
 </template>
@@ -21,18 +24,24 @@ export default { }
 
 <style lang="stylus" rel="stylesheet/stylus" >
 @import "../../common/stylus/mixins.styl"
+
 .headtab
-    display: block
-    height: 44px
-    line-height: 44px
+    display block
+    width 100%
+    height 30px
+    line-height 30px
+    background-color #FFCCCC
+    margin-top 45px
     .tab-item
-      flex: 1
-      text-align: center
+      flex 1
+      text-align center
+      width 20%
+      float left
       .tab-link
         padding-bottom: 5px
-        color: $color-text-l
+        color $color-text-l
       &.router-link-active
         .tab-link
-          color: #FF6666
-          border-bottom: 2px solid #FF6666
+          color #CC9999
+          border-bottom: 2px solid #CC9999
 </style>
