@@ -1,26 +1,32 @@
 <template>
-  <div class="HeaderGuide">
-    <div class=" left_icon">
-            <img class="iconfont_left" src="./img/logo.png" alt="">
-          </div>
-    <div class="header_middle item_icon">
+<div class="bHead">
+<div class="container">
+<div class="row" >
+ <div class="col-2">
+      <img class="iconfont_left" src="./img/logo.png" alt="">
+
+ </div>
+  <div class="col-8">
+   <div class="header_middle item_icon">
             <i class="iconfont  icon-sousuo search_img" ></i>
         <input class="header_search"  placeholder="搜索商品名称">
     </div>
-    <div class=" right_icon" >
-            <img class="iconfont_right" src="./img/user.png" alt="">
-        </div>
-  </div>
+ </div>
+ <div class="col-2">
+      <img class="iconfont_right" src="./img/user.png" alt="">
+ </div>
+ </div>
+ </div>
+</div>
 </template>
 
-<script>
-export default {
-}
+<script type="text/ecmascript-6">
+export default { }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
- @import "../../common/stylus/mixins.styl"
-  .HeaderGuide
+<style lang="stylus" rel="stylesheet/stylus" >
+@import "../../common/stylus/mixins.styl"
+  .bHead
     overflow hidden
     background-color #fff
     bottom-border-1px(#f5f5f5)
@@ -39,31 +45,14 @@ export default {
       width 50%
       height 50%
       max-width 100px
-    .left_icon
-      display block
-      float left
-      line-height 45px
-      width 10%
-      margin 0 auto
-      height 45px
-      padding-left 10px
-    .right_icon
-      display block
-      float right
-      line-height 45px
-      width 10%
-      height 45px
     .header_middle
       float left
       display block
       align-items center
       text-align center
-      vertical-align inherit
-      // float left
-      width 80%
+      width 100%
       height 45px
       margin 0 auto
-      padding 0 10px 0 10px
       background-color #f2f2f2
       position relative
       .search_img

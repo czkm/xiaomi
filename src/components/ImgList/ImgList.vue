@@ -27,8 +27,9 @@ export default {
  .img_list
    min-height 200px
    width 100%
-   height 100%
-   margin-bottom 20px
+   height auto
+   padding-top 5px
+   padding-bottom 5px
    .list_left
      width 49%
      height 100%

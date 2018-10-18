@@ -1,5 +1,6 @@
 <template>
    <div>
+        <bHead></bHead>
         <HeadTable></HeadTable>
         <router-view></router-view>
    </div>
@@ -7,6 +8,8 @@
 
 <script type="text/ecmascript-6">
 import HeadTable from '@/components/HeadTable/HeadTable'
+import HeadGuide from '@/components/HeadGuide/HeadGuide'
+import bHead from '@/components/HeadGuide/bHead'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 /* eslint-disable */ 
@@ -22,7 +25,9 @@ export default {
     })
   },
   components: {
-    HeadTable
+    HeadTable,
+    HeadGuide,
+    bHead
   }
 }
 </script>
