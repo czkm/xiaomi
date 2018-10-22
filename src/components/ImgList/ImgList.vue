@@ -30,6 +30,8 @@ export default {
    height auto
    padding-top 5px
    padding-bottom 5px
+   clearFix()
+   maxwidth()
    .list_left
      width 49%
      height 100%

@@ -1,5 +1,5 @@
 <template>
-   <div class="mylogin">
+   <div class="mylogin maxwidth">
        <div class="login_top">
            <div class="login_box">
               <router-link to="/login">
@@ -19,11 +19,14 @@ export default { }
 
 <style lang="stylus" rel="stylesheet/stylus" >
 @import "../../common/stylus/mixins.styl"
+
  .mylogin
    overflow hidden
    bottom-border-1px(#f5f5f5)
    height 100%
    background-color #f5f5f5
+   clearFix()
+   maxwidth()
    .login_top
      position relative
      height 80px

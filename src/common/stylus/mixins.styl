@@ -1,3 +1,16 @@
+//以border算宽度而不是以内容
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 // 一像素下边框
 bottom-border-1px($color)
   position relative
@@ -49,3 +62,11 @@ clearFix()
     content ''
     display block
     clear both
+
+maxwidth()
+  display block;
+  max-width 720px
+  margin 0 auto
+  
+
+    

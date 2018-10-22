@@ -15,6 +15,8 @@ export default { }
 <style lang="stylus" rel="stylesheet/stylus" >
 @import "../../common/stylus/mixins.styl"
  .homelist
+   clearFix()
+   maxwidth()
    height 75px
    top-border-1px(#f5f5f5)
    .home_list

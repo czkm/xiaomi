@@ -33,7 +33,7 @@ export default {
     background-color #f2f2f2
     .iconfont_left
       width 100%
-      height 100%
+      height 50%
       max-width 100px
     .iconfont_right
       width 50%

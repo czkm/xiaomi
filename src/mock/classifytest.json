@@ -1,0 +1,255 @@
+{
+    "classifyinfo":[
+        {
+            "name":"手机",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/1.png",
+                    "txt":"11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/2.png",
+                    "txt":"222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/3.png",
+                    "txt":"33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/4.png",
+                    "txt":"4444444"
+                }
+            ]
+        },
+        {
+            "name":"电视",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/tv1.jpg",
+                    "txt":"tv11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv2.jpg",
+                    "txt":"tv222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv3.jpg",
+                    "txt":"tv33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv4.jpg",
+                    "txt":"tv4444444"
+                }
+            ]
+        },
+        {
+            "name":"手机",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/1.png",
+                    "txt":"11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/2.png",
+                    "txt":"222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/3.png",
+                    "txt":"33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/4.png",
+                    "txt":"4444444"
+                }
+            ]
+        },
+        {
+            "name":"电视",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/tv1.jpg",
+                    "txt":"tv11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv2.jpg",
+                    "txt":"tv222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv3.jpg",
+                    "txt":"tv33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv4.jpg",
+                    "txt":"tv4444444"
+                }
+            ]
+        },
+        {
+            "name":"手机",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/1.png",
+                    "txt":"11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/2.png",
+                    "txt":"222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/3.png",
+                    "txt":"33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/4.png",
+                    "txt":"4444444"
+                }
+            ]
+        },
+        {
+            "name":"电视",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/tv1.jpg",
+                    "txt":"tv11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv2.jpg",
+                    "txt":"tv222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv3.jpg",
+                    "txt":"tv33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv4.jpg",
+                    "txt":"tv4444444"
+                }
+            ]
+        },
+        {
+            "name":"手机",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/1.png",
+                    "txt":"11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/2.png",
+                    "txt":"222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/3.png",
+                    "txt":"33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/4.png",
+                    "txt":"4444444"
+                }
+            ]
+        },
+        {
+            "name":"电视",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/tv1.jpg",
+                    "txt":"tv11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv2.jpg",
+                    "txt":"tv222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv3.jpg",
+                    "txt":"tv33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv4.jpg",
+                    "txt":"tv4444444"
+                }
+            ]
+        },
+        {
+            "name":"手机",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/1.png",
+                    "txt":"11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/2.png",
+                    "txt":"222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/3.png",
+                    "txt":"33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/4.png",
+                    "txt":"4444444"
+                }
+            ]
+        },
+        {
+            "name":"电视",
+            "info":[
+                {
+                    
+                    "img":"../../static/img/classify_img/tv1.jpg",
+                    "txt":"tv11111"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv2.jpg",
+                    "txt":"tv222222"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv3.jpg",
+                    "txt":"tv33333"
+                },
+                {
+                    
+                    "img":"../../static/img/classify_img/tv4.jpg",
+                    "txt":"tv4444444"
+                }
+            ]
+        }
+
+    ]
+}

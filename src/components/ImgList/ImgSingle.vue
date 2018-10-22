@@ -25,6 +25,7 @@ export default {
    height 100%
    margin 0 auto
    padding-top 10px
+   padding-bottom 10px
    .container
      padding 0
      .img_mian

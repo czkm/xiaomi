@@ -1,0 +1,21 @@
+{
+ 
+        
+            "a":[
+                { "title": "123", "src":"../../../static/img/bg15.jpg" },
+                { "title": "123", "src":"../../../static/img/bg15.jpg" },
+                { "title": "456", "src":"../../../static/img/bg16.jpg" },
+                { "title": "453", "src":"../../../static/img/bg17.jpg" }
+            ],
+            "b": [ 
+                { "title": "666", "src":"../../../static/img/bg21.jpg" },
+                { "title": "666", "src":"../../../static/img/bg21.jpg" },
+                { "title": "7777", "src":"../../../static/img/bg22.jpg" },
+                { "title": "666", "src":"../../../static/img/bg23.jpg" },
+                { "title": "7777", "src":"../../../static/img/bg24.jpg" }
+             ]  
+
+        
+
+
+}

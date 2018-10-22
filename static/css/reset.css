@@ -96,3 +96,10 @@
    text-overflow: ellipsis;
    white-space: nowrap;
  }
+ .fl {
+ float: left
+}
+
+.fr {
+ float: right 
+}
