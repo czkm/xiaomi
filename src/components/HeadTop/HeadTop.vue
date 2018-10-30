@@ -16,14 +16,12 @@
 export default {
   props: {
     title: String
+  },
+  methods: {
+    back () {
+      this.$router.go(-1)
+    }
   }
-  // methods: {
-  //   back () {
-  //     console.log('11111')
-  // back(){
-  //   this.$router.go(-1);//返回上一层
-  //   }
-  // }
 }
 </script>
 

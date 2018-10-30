@@ -14,8 +14,9 @@
             <span class="tab-link">智能</span>
         </router-link>
         <router-link tag="div" class="tab-item" to="/home/laptop">
-            <span class="tab-link">笔记本</span>
+            <span class="tab-link">笔记</span>
         </router-link>
+
         <div class="show_item fr" @click="showToggle()" >vvvvv</div>
     </div>
 
@@ -59,11 +60,10 @@ export default {
 
     methods:{
 			showToggle:function() {
-
              this.show = !this.show
-                 console.log(show)   
-			}
-		}
+             console.log(this.show)       
+            }
+    }
  }
 </script>
 
@@ -77,6 +77,7 @@ export default {
     line-height 30px
     background-color #FFCCCC
     margin-top 45px
+    position fixed
     clearFix()
     bottom-border-1px(#FFCCCC)
     .isitem
@@ -100,7 +101,6 @@ export default {
     .tab-item
       flex 1
       text-align center
-      width 15%
       float left
       .tab-link
         padding-bottom: 5px
