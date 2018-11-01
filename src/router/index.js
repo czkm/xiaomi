@@ -10,6 +10,7 @@ import Phone from '../pages/HeadTabList/Tab_phone.vue'
 import Tv from '../pages/HeadTabList/Tab_tv.vue'
 import Intelligent from '../pages/HeadTabList/Tab_intelligent.vue'
 import LapTop from '../pages/HeadTabList/Tab_laptop.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -21,36 +22,60 @@ export default new Router({
     {
       path: '/home',
       component: Home,
+      meta: {
+        showfooter: true
+      },
       children: [
         {
           path: '',
-          redirect: '/home/recommend'
+          redirect: '/home/recommend',
+          meta: {
+            showfooter: true
+          }
         },
         {
           path: 'recommend',
-          component: Recommend
+          component: Recommend,
+          meta: {
+            showfooter: true
+          }
         },
         {
           path: 'phone',
-          component: Phone
+          component: Phone,
+          meta: {
+            showfooter: true
+          }
         },
         {
           path: 'tv',
-          component: Tv
+          component: Tv,
+          meta: {
+            showfooter: true
+          }
         },
         {
           path: 'intelligent',
-          component: Intelligent
+          component: Intelligent,
+          meta: {
+            showfooter: true
+          }
         },
         {
           path: 'lapTop',
-          component: LapTop
+          component: LapTop,
+          meta: {
+            showfooter: true
+          }
         }
       ]
     },
     {
       path: '/classify',
-      component: Classify
+      component: Classify,
+      meta: {
+        showfooter: true
+      }
     },
     {
       path: '/Shopping',
@@ -58,7 +83,10 @@ export default new Router({
     },
     {
       path: '/mine',
-      component: Mine
+      component: Mine,
+      meta: {
+        showfooter: true
+      }
     },
     {
       path: '/login',

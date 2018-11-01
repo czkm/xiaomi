@@ -1,0 +1,46 @@
+ {
+     "shopcart" :[
+        {
+            "goodsTitle": "小米双肩包",							
+            "specifications": "黑色",							
+            "unitPrice": "79",									
+            "subimage1Filename" :"../../static/img/shopcart_img/shopcart3.jpg",		
+            "num": 6								
+        }, 
+        {
+            "goodsTitle": "小米平板4",
+            "specifications": "黑色，128g",
+            "unitPrice": "2099",
+            "subimage1Filename": "../../static/img/shopcart_img/shopcart2.jpg",
+            "num": 1
+        }, 
+        {
+            "goodsTitle": "悟空米兔",
+            "specifications": "多色",
+            "unitPrice": "49",
+            "subimage1Filename": "../../static/img/shopcart_img/shopcart1.jpg",
+            "num": 1
+        },
+        {
+            "goodsTitle": "悟空米兔",
+            "specifications": "多色",
+            "unitPrice": "49",
+            "subimage1Filename": "../../static/img/shopcart_img/shopcart1.jpg",
+            "num": 1
+        },
+        {
+            "goodsTitle": "悟空米兔",
+            "specifications": "多色",
+            "unitPrice": "49",
+            "subimage1Filename": "../../static/img/shopcart_img/shopcart1.jpg",
+            "num": 1
+        },
+        {
+            "goodsTitle": "悟空米兔",
+            "specifications": "多色",
+            "unitPrice": "49",
+            "subimage1Filename": "../../static/img/shopcart_img/shopcart1.jpg",
+            "num": 1
+        }
+    ]
+ }

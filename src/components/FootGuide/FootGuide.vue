@@ -1,6 +1,6 @@
 <template>
    <div class="footer_guide">
-      <a href="javascript:;" class="guide_item" :class="{on: '/home'===$route.path}" @click="goto('/home')">
+      <a href="javascript:;" class="guide_item" :class="{on: '/home/recommend'===$route.path}" @click="goto('/home')">
           <span class="item_icon">
               <i class="iconfont icon-shouye" ></i>
           </span>

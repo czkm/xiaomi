@@ -1,17 +1,18 @@
 <template>
-   <div class="">
-Shopping
-<div class="Shopping">
+
+  <div class="Shopping">
        <Headtop title="Shopping"></Headtop>
-   </div>
+       <ShopCart></ShopCart>
    </div>
 </template>
 
 <script type="text/ecmascript-6">
 import Headtop from '@/components/Headtop/Headtop'
+import ShopCart from '@/pages/Shopping/ShopCart'
 export default {
   components: {
-    Headtop
+    Headtop,
+    ShopCart
   }
 }
 </script>

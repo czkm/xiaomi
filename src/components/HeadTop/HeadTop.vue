@@ -1,6 +1,6 @@
 <template>
     <div class="headguide">
-          <div class="item_icon left_icon" @click="$router.back(-1)">
+          <div class="item_icon left_icon" @click="$router.back()">
             <i class="iconfont iconfont_left icon-jiantou1" ></i>
         </div>
             <div class="middle">
