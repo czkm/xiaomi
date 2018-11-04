@@ -1,9 +1,9 @@
 <template>
 <div class="imgsingle">
-  <div class="container ">
+<div class="container" v-for="(n, index) in imgtest.imgtest[0].single_img.length   " :key="index">
     <div class="row">
       <div class="col-12">
-        <img  class="img_mian" src="./img/img05.jpg" alt="">
+        <img  class="img_mian " :src="imgtest.imgtest[0].single_img[index].src" alt="">
       </div>
     </div>
   </div>
@@ -11,7 +11,16 @@
 </template>
 
 <script type="text/ecmascript-6">
+import imgtest from '@/mock/imgtest.json'
+
 export default {
+  /* eslint-disable */
+  data: function () { 
+    return { 
+      imgtest
+    }
+ 
+  } 
 }
 </script>
 

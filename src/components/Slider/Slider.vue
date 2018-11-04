@@ -2,8 +2,8 @@
    <div class="slider">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"  v-for="(n, index) in 3   " :key="index">
-                    <img class="slide_img" :src="slider_img[0].a[n].src" alt="">
+                <div class="swiper-slide"  v-for="(n, index) in slider_img.length  " :key="index">
+                    <img class="slide_img" :src="slider_img[index].src" alt="">
                     </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -17,16 +17,14 @@ import 'swiper/dist/css/swiper.min.css'
 /* eslint-disable */
 export default {
 data: function () { 
-    return { slider_img :[{
-      'a': [ 
+    return { 
+      slider_img :[
+   
          { "title": "123", "src":"../../../static/img/bg.jpg" },
          { "title": "123", "src":"../../../static/img/bg2.jpg" },
          { "title": "453", "src":"../../../static/img/bg5.jpg" },
-         { "title": "123", "src":"../../../static/img/bg.jpg" },
-     
-     ],
-     
-    }]
+        //  { "title": "123", "src":"../../../static/img/bg.jpg" },    
+    ]
    }
  
   }, 

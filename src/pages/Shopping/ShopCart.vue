@@ -8,32 +8,36 @@
                <div class="col-12" v-else>
                     <h3 class="panel-title">购物车</h3>
                     <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>
+                        <!-- <thead>
+                            <tr> -->
+                                <!-- <th>
                                     <input type="checkbox" v-model="allcheck" @click="selectall()">
-                                </th>
-                                <th>名称</th>
+                                </th> -->
+                                <!-- <th>名称</th>
                                 <th>价格</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
+                                <th>操作</th> -->
+                            <!-- </tr>
+                        </thead> -->
                         <tbody >
                             <tr v-for="(item,index) in shopcart.shopcart" :key="index">
-                                <td class="col-1">
+                              <div class="col-12 pd">
+                                <td class="col-1 pd">
                                 <input type="checkbox" :id="'check'+index" name="checkboxs" v-model="checkeds[index]" />
                                 </td>
-                                <td class="col-5 shop-min"><img class="shopimg" :src="item.subimage1Filename" /></td>
-                                <td class="col-5">
-                                  <p>{{item.goodsTitle}} {{item.specifications}}</p>
-                                  <p>售价：￥{{item.unitPrice}}</p>
+                                <td class="col-5 shop-min pd"><img class="shopimg" :src="item.subimage1Filename" /></td>
+                                <td class="col-5 pd">
+                                  <div>{{item.goodsTitle}} {{item.specifications}}</div>
+                                  <small>售价：￥{{item.unitPrice}}</small>
+                                  <p class="tmp" style=" display:block min; min-width:100px">
                                   <button @click="redus(index)" >-</button>
-                                  <input type="text" v-model="item.num" style="width:30px"  >
+                                  <input type="text" v-model="item.num" style="width:30px">
                                   <button @click="plus(index)" >+</button>
+                                  </p>
                                 </td>
-                                <td class="col-1">
+                                <td class="col-1 pd">
                                     <button type="button" class="btn btn-danger" @click="del(index)">删除</button>
                                 </td>
+                                </div>
                             </tr>
                         </tbody>
                     </table>
@@ -43,8 +47,8 @@
       <div class="foot">
         <div class="container">
           <div class="row">
-            <div class="col-4 ">共件<p>{{totalprice}}元</p></div>
-            <div class="col-4 btn-default center">
+            <div class="col-4 ">共?件<p>{{totalprice}}元</p></div>
+            <div class="col-4 btn-danger center" @click="goto('/classify')">
                 继续购物
               </div>
             <div class="col-4 btn-primary center">
@@ -53,6 +57,7 @@
           </div>
         </div>
       </div>
+      <ShopCartFoot/>
 </div>
 </template>
 
@@ -66,10 +71,13 @@ export default {
       allcheck: false,
       checkeds: new Array(shopcart.length),
       //商品选中
-      allselectitrm : []
+      // allselectitrm : []
     }
   },
   methods:{
+    goto(path){
+            this.$router.replace(path)
+        },
     plus(index){
       console.log(index)
       this.shopcart.shopcart[index].num++
@@ -112,12 +120,15 @@ export default {
     width 100%
     background #fff
     overflow hidden
-    .shop-min
-      min-width 50px
-      min-height 50px
-      .shopimg
-        width 100%
-        height 100%
+    .pd
+      padding 0
+      .shop-min
+        min-width 100px
+        min-height 50px
+        .shopimg
+          width 100%
+          height 100%
+        
 .foot
   height 50px
   .center

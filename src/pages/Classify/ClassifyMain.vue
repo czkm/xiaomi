@@ -7,24 +7,24 @@
      <ul>
          <!--current-->
           <li class="menu-item" v-for="(item, index) in classifytest.classifyinfo"  :class="{current: index===currentIndex}"  @click="clickitem(index)" :key="index" >
-            <span  class="text bottom-border-1px"  >
+            <span  class="text bottom-border-1px "  >
               <!-- <img class="icon" :src="good.icon" v-if="good.icon"> -->
               {{item.name}}
             </span >
           </li>
       </ul>
   </div>
-  <!-- 右侧的食物列表-->
+  <!-- 右侧的商品列表-->
   <div class="shops-wrapper" ref="shopsWrapper">
-    <!-- 右侧的食物列表是根据左侧的分类列表展现的-->
-    <!-- 所以右侧是在一个分类标题列表里面嵌套着各类食物列表-->
+    <!-- 右侧的商品列表是根据左侧的分类列表展现的-->
+    <!-- 所以右侧是在一个分类标题列表里面嵌套着各类商品列表-->
     <ul ref="ShopsUl">
          <li class="container shop-list-hook"  v-for="(item, index) in classifytest.classifyinfo" :key="index" >
-            <h5 class="title">{{item.name}}</h5>
+            <h5 class="shoptitle">{{item.name}}</h5>
             <div class="row" >
             <div class="col-4" v-for="(info, index) in classifytest.classifyinfo[index].info" :key="index">
                 <img width="57" height="57" :src="info.img">
-                <h6>{{info.txt}}</h6>
+                <h6 class="shoptitle">{{info.txt}}</h6>
             </div>
           </div>
           </li>
@@ -148,7 +148,7 @@ export default {
       .menu-item
         height 80px
         text-align center
-        line-height 30px
+        line-height 80px
         border 1px solid red
         &.current
           position: relative
@@ -159,5 +159,6 @@ export default {
           font-weight: 700
     .shops-wrapper
       flex: 1
-      
+      .shoptitle
+        text-align center
 </style>

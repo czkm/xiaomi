@@ -3,30 +3,27 @@
         <slider/>
         <HomeList></HomeList>
         <ImgList></ImgList>
-        <ImgSingle></ImgSingle>
         <!-- <ImgDouble></ImgDouble> -->
-        <imgleft></imgleft>
-        <imgright></imgright>
+        <Itemlist/>
    </div>
 </template>
 
 <script type="text/ecmascript-6">
 import Slider from '@/components/Slider/Slider'
-import ImgSingle from '@/components/ImgList/ImgSingle'
+
 import HomeList from '@/pages/Home/HomeList'
 import ImgList from '@/components/ImgList/ImgList'
-import imgleft from '@/components/ImgList/img_left'
-import imgright from '@/components/ImgList/img_right'
+import ImgDouble from '@/components/ImgList/ImgDouble'
+import Itemlist from '@/components/ImgList/Itemlist'
 /* eslint-disable */
 export default {
  
   components: {
     HomeList,
     ImgList,
-    ImgSingle,
     Slider,
-    imgleft,
-    imgright
+    ImgDouble,
+    Itemlist
 
 
   }

@@ -1,11 +1,12 @@
 <template>
 <div class="img_right">
-<div class="container" v-for="(n, index) in 3   " :key="index">
+<div class="container" v-for="(n, index) in imgtest.imgtest[0].right_img.length   " :key="index">
+  <!-- <div class="container" > -->
 <div class="row" >
  <div class="col-12">
-   <img  class="col_img " :src="imgtest.a[n].src" alt="">
+   <img  class="col_img " :src="imgtest.imgtest[0].right_img[index].src" alt="">
  </div>
-  <p class="col_txt"  > name:{{imgtest.a[n].title}}</p>
+  <p class="col_txt"  > name:{{imgtest.imgtest[0].right_img[index].title}}</p>
  </div>
  </div>
 </div>
@@ -32,7 +33,7 @@ export default {
 .img_right
   clearFix()
   maxwidth()
-  width 50%
+  width 100%
   box-sizing border-box
   padding-bottom 25px
   display block
