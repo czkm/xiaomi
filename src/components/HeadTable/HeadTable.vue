@@ -28,9 +28,9 @@
                 <div class="row" >
                 <div class="col-12 show_col-12">
                     <div  class="btn-wrap " >
-                          <router-link to="/home/recommend">
+                        <router-link to="/home/recommend">
                             <div  class="extra-btn col-3 " >推荐</div>
-                       </router-link>
+                        </router-link>
                             <div  class="extra-btn col-3 ">手机</div>
                             <div  class="extra-btn col-3 ">智能</div>
                             <div  class="extra-btn col-3 ">电视</div>
@@ -102,6 +102,7 @@ export default {
       flex 1
       text-align center
       float left
+      width 15%
       .tab-link
         padding-bottom: 5px
         color $color-text-l

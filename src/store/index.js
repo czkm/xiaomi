@@ -1,4 +1,4 @@
-//核心管理对象
+// 核心管理对象
 
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -9,8 +9,8 @@ import getters from './getters'
 
 Vue.use(Vuex)
 export default new Vuex.Store({
-    state,
-    mutations,
-    actions,
-    getters
+  state,
+  mutations,
+  actions,
+  getters
 })

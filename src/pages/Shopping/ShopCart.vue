@@ -34,7 +34,7 @@
                                   <button @click="plus(index)" >+</button>
                                   </p>
                                 </td>
-                                <td class="col-1 pd">
+                                <td class="col-2 pd">
                                     <button type="button" class="btn btn-danger" @click="del(index)">删除</button>
                                 </td>
                                 </div>
@@ -47,7 +47,7 @@
       <div class="foot">
         <div class="container">
           <div class="row">
-            <div class="col-4 ">共?件<p>{{totalprice}}元</p></div>
+            <div class="col-4 ">共{{count}}件<p>{{totalprice}}元</p></div>
             <div class="col-4 btn-danger center" @click="goto('/classify')">
                 继续购物
               </div>
@@ -104,8 +104,16 @@ export default {
             total += this.shopcart.shopcart[i].num * this.shopcart.shopcart[i].unitPrice;
         }
         return total
+      },
+      count (){
+         var num = 0;
+        for(var i in this.shopcart.shopcart){
+           if (this.checkeds[i])
+           num += this.shopcart.shopcart[i].num;
+          }
+        return num;
+         }
       }
-    }
   }
 </script>
 

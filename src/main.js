@@ -9,12 +9,18 @@ import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import store from './store'
 
+
+Vue.use(ElementUI);
 // Vue.config.productionTip = false
 fastclick.attach(document.body)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   render: h => h(App),
-  router
+  router,
+  store,     //使用vuex
 })

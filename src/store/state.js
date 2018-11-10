@@ -1,7 +1,6 @@
-//状态对象
-
+// 状态对象
+/* eslint-disable */
 export default{
-    slider_img: [],
-    shops: []
-
+    imglist: [],
+    slider: []
 }

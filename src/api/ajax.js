@@ -1,6 +1,7 @@
 /*
 ajax 请求函数模块
-*/ 
+*/
+/* eslint-disable */ 
 import axios from 'axios'
 /**
  * 向外部暴漏一个函数 ajax

@@ -10,7 +10,17 @@
               </router-link>
             </div>
        </div>
-   </div>
+        <div class="login_main">
+        <ul  class="b2 ui-flex align-center justify-space-between">
+        <li class="dfk">
+        <a href="/order/list?type=7" ><div class="icon"></div><span>待付款</span><!----></a></li>
+        <li class="dah"><a href="/order/list?type=8">
+        <div class="icon"></div><span>退换修</span>
+        </a>
+        </li>
+        </ul>
+        </div>
+    </div>
 </template>
 
 <script type="text/ecmascript-6">

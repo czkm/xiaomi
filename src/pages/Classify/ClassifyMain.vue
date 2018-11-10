@@ -20,13 +20,15 @@
     <!-- 所以右侧是在一个分类标题列表里面嵌套着各类商品列表-->
     <ul ref="ShopsUl">
          <li class="container shop-list-hook"  v-for="(item, index) in classifytest.classifyinfo" :key="index" >
-            <h5 class="shoptitle">{{item.name}}</h5>
-            <div class="row" >
+             <img   class="col-12 fd " :src="item.singleimg">
+            <div class="shoptitle"> {{item.name}}
+            </div>
+            <div class="row col-12" >
             <div class="col-4" v-for="(info, index) in classifytest.classifyinfo[index].info" :key="index">
-                <img width="57" height="57" :src="info.img">
+                <img width="65" height="65" :src="info.img">
                 <h6 class="shoptitle">{{info.txt}}</h6>
             </div>
-          </div>
+            </div>
           </li>
     </ul>
   </div>
@@ -37,6 +39,7 @@
 
 import BScroll from 'better-scroll'
 import classifytest from '@/mock/classifytest.json'
+
 /* eslint-disable */ 
 export default {
   data () {
@@ -52,7 +55,6 @@ export default {
     // setTimeout(()=>{ 
         this._initScroll()
         this._initTops ()
-    
         // },2000)
       
     // })
@@ -104,7 +106,8 @@ export default {
         tops.push(top)
         // 2.收集
         // 找到所有分类的li
-        const lis = this.$refs.ShopsUl.children
+        // const lis = this.$refs.ShopsUl.children
+        const lis = this.$refs.ShopsUl.getElementsByClassName('shop-list-hook')
         Array.prototype.slice.call(lis).forEach(li => {
           top += li.clientHeight
           tops.push(top)
@@ -125,7 +128,8 @@ export default {
       this.shopScroll.scrollTo(0, -scrollY, 300)
     },
 
-  }
+  },
+ 
 }
 </script>
 
@@ -152,13 +156,14 @@ export default {
         border 1px solid red
         &.current
           position: relative
-          z-index: 10
           margin-top: -1px
           background: #fff
           color: green
           font-weight: 700
     .shops-wrapper
       flex: 1
+      .fd
+        height 95px
       .shoptitle
         text-align center
 </style>

@@ -1,5 +1,6 @@
 <template>
    <div class="">
+     <!-- <div>{{imglist[0].lmglist[0].title}}</div> -->
      <div v-for="(j, index) in imgtest.imgtest.length" :key="index">
        <div class="imgsingle">
             <div class="container" v-for="(n, index) in imgtest.imgtest[j-1].single_img.length   " :key="index">
@@ -37,12 +38,12 @@
 import imgtest from '@/mock/imgtest.json'
 export default {
   /* eslint-disable */
-  data: function () { 
+  data () { 
     return { 
       imgtest
     }
- 
-  } 
+  }
+
 }
 </script>
 

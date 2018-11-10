@@ -16,6 +16,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "better-scroll": "^1.13.2",
+    "element-ui": "^2.4.9",
+    "express": "^4.16.4",
     "fastclick": "^1.0.6",
     "mockjs": "^1.0.1-beta3",
     "popper.js": "^1.14.4",
