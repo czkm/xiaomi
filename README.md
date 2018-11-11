@@ -1,7 +1,7 @@
 # my-xiaomi
 
 > A Vue.js project
-
+一个基于 vue 管理 构建的仿小米手机官网的vue项目
 ## Build Setup
 
 ``` bash
