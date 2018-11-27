@@ -11,14 +11,51 @@
             </div>
        </div>
         <div class="login_main">
-        <ul  class="b2 ui-flex align-center justify-space-between">
-        <li class="dfk">
-        <a href="/order/list?type=7" ><div class="icon"></div><span>待付款</span><!----></a></li>
-        <li class="dah"><a href="/order/list?type=8">
-        <div class="icon"></div><span>退换修</span>
-        </a>
-        </li>
-        </ul>
+         <el-row class="function_list">
+          <el-col :span="6">
+            <div class="list_icon"><i class="el-icon-edit"></i></div>
+          </el-col>
+          <el-col :span="14">
+            <div class="list_title ">
+            会员中心
+            </div>
+          </el-col>
+          <el-col :span="4">
+            <div class="list_icon">
+            <i class="el-icon-arrow-right"></i>
+            </div>
+          </el-col>
+        </el-row>
+          <el-row class="function_list">
+          <el-col :span="6">
+            <div class="list_icon"><i class="el-icon-edit"></i></div>
+          </el-col>
+          <el-col :span="14">
+            <div class="list_title ">
+            我的钱包
+            </div>
+          </el-col>
+          <el-col :span="4">
+            <div class="list_icon">
+            <i class="el-icon-arrow-right"></i>
+            </div>
+          </el-col>
+        </el-row>
+          <el-row class="function_list">
+          <el-col :span="6">
+            <div class="list_icon"><i class="el-icon-edit"></i></div>
+          </el-col>
+          <el-col :span="14">
+            <div class="list_title ">
+            我的优惠
+            </div>
+          </el-col>
+          <el-col :span="4">
+            <div class="list_icon">
+            <i class="el-icon-arrow-right"></i>
+            </div>
+          </el-col>
+        </el-row>
         </div>
     </div>
 </template>
@@ -66,4 +103,15 @@ export default { }
          text-align left
          line-height 50px
          color #fff
+   .login_main
+      width 100%
+     .function_list
+       height 50px
+       line-height 50px
+       text-align center
+       border-bottom 1px  #99a9bf solid
+       background-color #f5f5f5
+       .list_title
+         text-align left
+
 </style>

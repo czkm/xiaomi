@@ -10,7 +10,9 @@ import Phone from '../pages/HeadTabList/Tab_phone.vue'
 import Tv from '../pages/HeadTabList/Tab_tv.vue'
 import Intelligent from '../pages/HeadTabList/Tab_intelligent.vue'
 import LapTop from '../pages/HeadTabList/Tab_laptop.vue'
-
+import Detail from '../components/detail/detail.vue'
+import ShopCount from '../pages/Shopping/ShopCount.vue'
+import Sign from '../pages/Login/Sign.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -91,6 +93,24 @@ export default new Router({
     {
       path: '/login',
       component: Login
+    },
+    // 商品详情
+    {
+      path: '/home/detail/:id',
+      component: Detail,
+      name: 'detail'
+    },
+    {
+      // 结算界面
+      path: '/ShopCount',
+      name: 'ShopCount',
+      component: ShopCount
+    },
+    {
+      // 注册界面
+      path: '/Sign',
+      name: 'Sign',
+      component: Sign
     }
   ]
 })

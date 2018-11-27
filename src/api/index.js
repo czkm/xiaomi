@@ -2,7 +2,7 @@
 与后台交互模块 （依赖已封装的ajax函数）
  */
 import ajax from './ajax'
-const BASE_URL = 'https://www.easy-mock.com/mock/5be2bfccee1b3d272cafce7e/localhost8080'
+const BASE_URL = 'http://134.175.86.105:8080/XiaoMi/img'
 // const BASE_URL = '/api'
 // /**
 //  * 获取地址信息(根据经纬度串)

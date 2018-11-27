@@ -16,7 +16,9 @@
           <span class="item_icon">
               <i class="iconfont icon-gouwuche"></i>
           </span>
+             <el-badge :value="12" class="item">
             <span>购物车</span>
+               </el-badge>
       </a>
       <a href="javascript:;" class="guide_item" :class="{on: '/mine'===$route.path}" @click="goto('/mine')">
           <span class="item_icon">

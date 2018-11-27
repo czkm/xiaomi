@@ -22,7 +22,9 @@ export default {
     Itemlist
   },
      mounted () {
-    this.$store.dispatch('getImgList')
+    // this.$store.dispatch('getImgList')
+    
+
   }
 }
 </script>

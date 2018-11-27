@@ -2,5 +2,7 @@
 /* eslint-disable */
 export default{
     imglist: [],
-    slider: []
+    // singleimg: {}, //单个推荐图
+    slider: [],
+    shopid:[]//商品缓存
 }

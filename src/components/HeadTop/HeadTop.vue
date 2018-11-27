@@ -1,8 +1,10 @@
 <template>
     <div class="headguide">
-          <div class="item_icon left_icon" @click="$router.back()">
+        <router-link tag="div" to="/home" >
+          <div class="item_icon left_icon">
             <i class="iconfont iconfont_left icon-jiantou1" ></i>
         </div>
+        </router-link>
             <div class="middle">
                 <div class="head_txt">{{title}}</div>
             </div>
@@ -18,9 +20,9 @@ export default {
     title: String
   },
   methods: {
-    back () {
-      this.$router.go(-1)
-    }
+    // back () {
+    //   this.$router.go(-1)
+    // }
   }
 }
 </script>

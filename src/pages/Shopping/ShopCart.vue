@@ -22,20 +22,25 @@
                             <tr v-for="(item,index) in shopcart.shopcart" :key="index">
                               <div class="col-12 pd">
                                 <td class="col-1 pd">
-                                <input type="checkbox" :id="'check'+index" name="checkboxs" v-model="checkeds[index]" />
+                                <!-- <input type="checkbox" :id="'check'+index" name="checkboxs" v-model="checkeds[index]" /> -->
+                                  <el-checkbox :id="'check'+index" name="checkboxs" v-model="checkeds[index]"></el-checkbox>
                                 </td>
                                 <td class="col-5 shop-min pd"><img class="shopimg" :src="item.subimage1Filename" /></td>
                                 <td class="col-5 pd">
                                   <div>{{item.goodsTitle}} {{item.specifications}}</div>
                                   <small>售价：￥{{item.unitPrice}}</small>
                                   <p class="tmp" style=" display:block min; min-width:100px">
-                                  <button @click="redus(index)" >-</button>
+                                  <!-- <button @click="redus(index)" >-</button> -->
+                                     <el-button icon="el-icon-minus" circle @click="redus(index)"></el-button>
                                   <input type="text" v-model="item.num" style="width:30px">
-                                  <button @click="plus(index)" >+</button>
+                                  <!-- <el-input v-model="item.num" tyle="width:30px"></el-input> -->
+                                  <!-- <button @click="plus(index)" >+</button> -->
+                                     <el-button icon="el-icon-plus" circle @click="plus(index)" ></el-button>
                                   </p>
                                 </td>
                                 <td class="col-2 pd">
-                                    <button type="button" class="btn btn-danger" @click="del(index)">删除</button>
+                                    <el-button type="danger" icon="el-icon-delete"  @click="del(index)">删除</el-button>
+                                    <!-- <button type="button" class="btn btn-danger" @click="del(index)">删除</button> -->
                                 </td>
                                 </div>
                             </tr>
@@ -45,19 +50,18 @@
             </div>
         </div>
       <div class="foot">
-        <div class="container">
+        <div class="foot_container">
           <div class="row">
             <div class="col-4 ">共{{count}}件<p>{{totalprice}}元</p></div>
             <div class="col-4 btn-danger center" @click="goto('/classify')">
                 继续购物
               </div>
-            <div class="col-4 btn-primary center">
+            <div class="col-4 btn-primary center" @click="goto('/ShopCount')" >
                 去结算
             </div>
           </div>
         </div>
       </div>
-      <ShopCartFoot/>
 </div>
 </template>
 
@@ -75,6 +79,10 @@ export default {
     }
   },
   methods:{
+    //  ToShopcount(){
+    //   console.log(1)
+    //   this.$router.push({name:'ShopCount'})
+    // },
     goto(path){
             this.$router.replace(path)
         },
@@ -122,7 +130,7 @@ export default {
 
 .shopcart
     display: block
-    position: absolute
+    position: relative
     top 45px
     // bottom 50px
     width 100%

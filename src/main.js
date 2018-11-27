@@ -12,7 +12,9 @@ import 'bootstrap'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store'
-
+import axios from 'axios';
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+Vue.prototype.$axios = axios;
 
 Vue.use(ElementUI);
 // Vue.config.productionTip = false

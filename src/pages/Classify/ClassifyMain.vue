@@ -2,11 +2,10 @@
 <div class="classifylist ">
   <!-- 左侧的菜单选项-->
   <div  class="menu-wrapper" ref="menuWrapper">
-
     <!-- 菜单对应的是食物分类列表-->
      <ul>
          <!--current-->
-          <li class="menu-item" v-for="(item, index) in classifytest.classifyinfo"  :class="{current: index===currentIndex}"  @click="clickitem(index)" :key="index" >
+          <li class="menu-item" v-for="(item, index) in classifyname"  :class="{current: index===currentIndex}"  @click="clickitem(index)" :key="index" >
             <span  class="text bottom-border-1px "  >
               <!-- <img class="icon" :src="good.icon" v-if="good.icon"> -->
               {{item.name}}
@@ -19,14 +18,15 @@
     <!-- 右侧的商品列表是根据左侧的分类列表展现的-->
     <!-- 所以右侧是在一个分类标题列表里面嵌套着各类商品列表-->
     <ul ref="ShopsUl">
-         <li class="container shop-list-hook"  v-for="(item, index) in classifytest.classifyinfo" :key="index" >
-             <img   class="col-12 fd " :src="item.singleimg">
-            <div class="shoptitle"> {{item.name}}
-            </div>
-            <div class="row col-12" >
-            <div class="col-4" v-for="(info, index) in classifytest.classifyinfo[index].info" :key="index">
-                <img width="65" height="65" :src="info.img">
-                <h6 class="shoptitle">{{info.txt}}</h6>
+         <li class="container shop-list-hook"  v-for="(item, index) in classifyitem" :key="index" >
+             <img   class="col-12 fd " :src="baseurl+item.singleImg[0].src">
+            <!-- <div class="shoptitle" v-for="(item, index) in classifyname" :key="index" >
+              {{item.name}}
+               </div> -->
+               <div class="row col-12" >
+            <div class="col-4" v-for="(info, index) in classifyitem[index].imgList" :key="index">
+                <img width="65" height="65" :src="baseurl+info.src">
+                <h6 class="shoptitle">{{info.title}}</h6>
             </div>
             </div>
           </li>
@@ -34,31 +34,39 @@
   </div>
 </div>
 </template>
-
 <script type="text/ecmascript-6">
-
 import BScroll from 'better-scroll'
-import classifytest from '@/mock/classifytest.json'
+// import classifytest from '@/mock/classifytest.json'
+import axios from 'axios'
 
 /* eslint-disable */ 
 export default {
   data () {
     return { 
+     baseurl :'http://134.175.86.105:8080/XiaoMi',
      scrollY:0,//右侧滑动 y坐标
      tops:[], 
-     classifytest
-     
+     classifyname:[],//存储商品
+     classifyitem:[]
    }
   },
+  beforeMount(){
+    this.Ajaxcate()
+    this.AjaxcateImg()  
+  },
   mounted(){
-      this.$nextTick(() => { /* code */
-    // setTimeout(()=>{ 
-        this._initScroll()
-        this._initTops ()
-        // },2000)
+         
+        // this.$nextTick(() => {
+           /* code */
+           setTimeout(() => {
+               this._initScroll()
+                this._initTops ()
+           }, 2000);
       
+             
     // })
-    })
+    // })
+        
   },
    computed: {
     // 计算得到当前分类的下标
@@ -74,6 +82,7 @@ export default {
       return index
     }
   },
+  
   // updated() {
   //   this._initTops()
   // },
@@ -127,6 +136,23 @@ export default {
       // 平滑滑动右侧列表 better-scroll里的方法
       this.shopScroll.scrollTo(0, -scrollY, 300)
     },
+    Ajaxcate(){
+      axios.get('http://134.175.86.105:8080/XiaoMi/img'+'/cate')
+      .then(res =>  {
+        console.log(res.data);
+        this.classifyname = res.data
+        // console.log(imgList);
+      })
+    },
+    AjaxcateImg(){
+       axios.get('http://134.175.86.105:8080/XiaoMi/img'+'/cateImg')
+      .then(res =>  {
+        console.log(res.data);
+        this.classifyitem = res.data
+        // console.log(imgList);
+       
+      })
+    }
 
   },
  

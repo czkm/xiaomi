@@ -1,48 +1,63 @@
 <template>
+
    <div class="">
      <!-- <div>{{imglist[0].lmglist[0].title}}</div> -->
-     <div v-for="(j, index) in imgtest.imgtest.length" :key="index">
-       <div class="imgsingle">
-            <div class="container" v-for="(n, index) in imgtest.imgtest[j-1].single_img.length   " :key="index">
-                <div class="row">
-                <div class="col-12">
-                    <img  class="img_mian " :src="imgtest.imgtest[j-1].single_img[index].src" alt="">
-                </div>
-                </div>
-            </div>
-      </div>
-       <div class="img_list">
-          <!-- <div class="row " > -->
-          <div class="col-6 fl" v-for="(n, index) in imgtest.imgtest[j-1].imglist.length   " :key="index" >
-          <img  class="col_img " :src="imgtest.imgtest[j-1].imglist[index].src" alt="">
-          <h6 > name:{{imgtest.imgtest[j-1].imglist[index].title}}</h6>
-            <h6 > name:{{imgtest.imgtest[j-1].imglist[index].title}}</h6>
+     <div v-for="(j, index) in 4" :key="index">
+  <div class="imgsingle">
+          <div class="container" v-for="(n, index) in imgList[0].singleImg.length   " :key="index">
+              <div class="row">
+              <div class="col-12">
+                <img  class="img_mian " :src="baseurl+imgList[0].singleImg[index].src" alt="">
+              </div>
+              </div>
           </div>
-          <!-- </div> -->
+  </div>
+       <div class="img_list">
+          <div class="col-6 fl" v-for="(n, index) in imgList.length" :key="index" >
+           <router-link tag="div" :to="{ name:'detail', params: {id: imgList[0].imgList[index].id} }" >
+          <img  class="col_img " :src="baseurl+imgList[0].imgList[index].src" alt="" @click="godetail(imgList[0].imgList[index].id)">
+            </router-link>
+          <!-- <span>{{imgList[0].imgList[index].id}}</span> -->
+          <h6 > name:{{imgList[0].imgList[index].title}}</h6>
+          <h6 > name:{{imgList[0].imgList[index].price}}</h6>
+          </div>
       </div>
-        <!-- <div class="img_right">
-            <div class="container" v-for="(n, index) in imgtest.imgtest[j-1].right_img.length   " :key="index">
-            <div class="row" >
-            <div class="col-12">
-            <img  class="col_img " :src="imgtest.imgtest[j-1].right_img[index].src" alt="">
-            </div>
-            <p class="col_txt"  > name:{{imgtest.imgtest[j-1].right_img[index].title}}</p>
-            </div>
-            </div>
-        </div> -->
     </div>
    </div>
 </template>
 
 <script type="text/ecmascript-6">
-import imgtest from '@/mock/imgtest.json'
+// import imgtest from '@/mock/imgtest.json'
+// import{mapState}from 'vuex'
+// import {reqImgList} from '@/api'
+import axios from 'axios'
 export default {
   /* eslint-disable */
   data () { 
     return { 
-      imgtest
+      baseurl :'http://134.175.86.105:8080/XiaoMi',
+      imgList : []
+    }
+  },
+
+  mounted(){
+    // this.$store.dispatch('getImgList')
+    axios.get('http://134.175.86.105:8080/XiaoMi/img'+'/imglist')
+      .then(res =>  {
+        console.log(res.data);
+        this.imgList = res.data
+        // console.log(imgList);    
+      })    
+  },
+  methods:{
+    godetail(id){
+    //获取商品id查看详情
+    console.log(id)
+  
+     
     }
   }
+
 
 }
 </script>
