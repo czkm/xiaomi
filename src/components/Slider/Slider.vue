@@ -36,7 +36,7 @@ data () {
     // // console.log(result)
     // // this.imgList = result
     // console.log(result)
-
+//
     axios.get('http://192.168.43.96:8085/img'+'/imglist')
       .then(res =>  {
         console.log(res.data);
