@@ -27,37 +27,37 @@
 </template>
 
 <script type="text/ecmascript-6">
-// import imgtest from '@/mock/imgtest.json'
+import imgtest from '@/api/imglist.json'
 // import{mapState}from 'vuex'
 // import {reqImgList} from '@/api'
-import axios from 'axios'
+// import axios from 'axios'
 export default {
-  /* eslint-disable */
-  data () { 
-    return { 
-      baseurl :'http://134.175.86.105:8080/XiaoMi',
-      imgList : []
+  data () {
+    return {
+      baseurl: 'http://192.168.43.96:8085/',
+      imgList: []
+
     }
   },
 
-  mounted(){
+  mounted () {
+    console.log(imgtest)
+    console.log(this.$store.state.testurl)
     // this.$store.dispatch('getImgList')
-    axios.get('http://134.175.86.105:8080/XiaoMi/img'+'/imglist')
-      .then(res =>  {
-        console.log(res.data);
-        this.imgList = res.data
-        // console.log(imgList);    
-      })    
+    // axios.get('http://192.168.43.96:8085/img/imglist')
+    //   .then(res => {
+    //     console.log(res.data)
+    //     this.imgList = res.data
+    //   })
+    // 直接赋值
+    this.imgList = imgtest
   },
-  methods:{
-    godetail(id){
-    //获取商品id查看详情
-    console.log(id)
-  
-     
+  methods: {
+    godetail (id) {
+    // 获取商品id查看详情
+      console.log(id)
     }
   }
-
 
 }
 </script>
@@ -79,7 +79,7 @@ export default {
      .img_mian
        width 100%
        height 100%
-      
+
  .img_list
    clearFix()
    maxwidth()
@@ -103,5 +103,5 @@ export default {
 //   .col_img
 //     width 100%
 //     height 100%
-//     float left        
+//     float left
 </style>

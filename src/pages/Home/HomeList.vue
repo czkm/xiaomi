@@ -12,16 +12,15 @@
 </template>
 
 <script type="text/ecmascript-6">
-/* eslint-disable */ 
-export default { 
+export default {
   data () {
     return {
-      home_list :[
-         { "title": "123", "src": "../../../static/img/list_img/homelist1.png" },
-         { "title": "123", "src": "../../../static/img/list_img/homelist2.png" },
-         { "title": "453", "src": "../../../static/img/list_img/homelist3.jpg" },
-         { "title": "453", "src": "../../../static/img/list_img/homelist4.png" },
-         { "title": "453", "src": "../../../static/img/list_img/homelist5.png" }
+      home_list: [
+        { title: '123', src: '../../../static/img/list_img/homelist1.png' },
+        { title: '123', src: '../../../static/img/list_img/homelist2.png' },
+        { title: '453', src: '../../../static/img/list_img/homelist3.jpg' },
+        { title: '453', src: '../../../static/img/list_img/homelist4.png' },
+        { title: '453', src: '../../../static/img/list_img/homelist5.png' }
       ]
     }
   }
@@ -29,17 +28,23 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" >
-@import "../../common/stylus/mixins.styl"
- .homelist
-   clearFix()
-   maxwidth()
-   height 75px
-   top-border-1px(#f5f5f5)
-   .home_list
-     float left
-     width 20%
-     clearFix()
-     .list_img
-       width 100%
-       height 100%
+@import '../../common/stylus/mixins.styl';
+
+.homelist {
+  clearFix();
+  maxwidth();
+  height: 75px;
+  top-border-1px(#f5f5f5);
+
+  .home_list {
+    float: left;
+    width: 20%;
+    clearFix();
+
+    .list_img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 </style>

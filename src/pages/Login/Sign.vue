@@ -86,7 +86,7 @@ export default {
         //       })
         //     return false    
         // }
-       const url ='http://134.175.86.105:8080/XiaoMi/useres/edit';
+       const url ='http://192.168.43.96:8085/useres/edit';
         var params = new URLSearchParams();
         params.append('username', this.form.username);       //你要传给后台的参数值 key/value
         params.append('password', this.form.password);

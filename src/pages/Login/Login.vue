@@ -35,51 +35,52 @@
 
 <script type="text/ecmascript-6">
 export default {
-  /* eslint-disable */ 
-  data(){ 
-    return{
-      UserName:'',
-      Password:'',
-      isLogin:''
+  data () {
+    return {
+      UserName: '',
+      Password: '',
+      isLogin: ''
     }
   },
-  methods:{ 
-   
-    goto(path){
-            this.$router.replace(path)
-      },
-    UserLogin(){  
-        const url ='http://134.175.86.105:8080/XiaoMi/useres/iflogin';
-        var params = new URLSearchParams();
-        params.append('username', this.UserName);       //你要传给后台的参数值 key/value
-        params.append('password', this.Password);
-        this.$axios({
-            method: 'post',
-            url:url,
-            data:params
-        }).then((res)=>{
-              console.log(res.data);
-              let result = res.data;
-              if(result.statusCode===1){
-              //调用el弹窗
-              this.$alert(result.message, '状态', {
-              confirmButtonText: '确定',
-              callback: action => {
-                //获取用户的userid 存入缓存
-                  localStorage.setItem("userid",result.userid);
-                  this.$router.replace('/home')
-                }
-              });
-            }else{
-                this.$alert(result.message, '状态', {
-                confirmButtonText: '确定',            
-              });
-            }
+  methods: {
 
-        });
-      
-     
+    goto (path) {
+      this.$router.replace(path)
+    },
+    UserLogin () {
+      const url = 'http://192.168.43.96:8085/useres/iflogin'
+      var params = new URLSearchParams()
+      params.append('username', this.UserName) // 你要传给后台的参数值 key/value
+      params.append('password', this.Password)
+      this.$axios({
+        method: 'post',
+        url: url,
+        data: params
+      }).then((res) => {
+        console.log(res.data)
+        let result = res.data
+        if (result.statusCode === 1) {
+          // 调用el弹窗
+          this.$alert(result.message, '状态', {
+            confirmButtonText: '确定',
+            callback: action => {
+              // 获取用户的userid 存入缓存
+              localStorage.setItem('userid', result.userid)
+              this.$router.replace('/home')
+            }
+          })
+        } else {
+          this.$alert(result.message, '状态', {
+            confirmButtonText: '确定'
+          })
+        }
+      }).catch((err) => {
+        console.log(err)
+      })
     }
+  },
+  mounted () {
+    console.log(this.$store.state.bseurl)
   }
 }
 </script>
@@ -87,7 +88,7 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus" >
 @import "../../common/stylus/mixins.styl"
  .el-message-box
-   width 320px !important 
+   width 320px !important
  .login
    width 100%
    height 100%

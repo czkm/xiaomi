@@ -35,7 +35,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      baseurl :'http://134.175.86.105:8080/XiaoMi',
+      baseurl :'http://192.168.43.96:8085',
       id: this.$route.params.id,
       detail:[1],
       isAdd :true,
@@ -67,7 +67,7 @@ export default {
         }
 
 
-        const url ='http://134.175.86.105:8080/XiaoMi/cartAPi/edit';
+        const url ='http://192.168.43.96:8085/cartAPi/edit';
         var params = new URLSearchParams();
         params.append('userid', localStorage.getItem("userid"));       //你要传给后台的参数值 key/value
         params.append('title', this.detail[0].title);
@@ -100,7 +100,7 @@ export default {
   mounted() {
     // this.$store.dispatch('getImgList')
     let a = this.$route.params.id
-    axios.get('http://134.175.86.105:8080/XiaoMi/img/postImgdescribe/'+a)
+    axios.get('http://192.168.43.96:8085/img/postImgdescribe/'+a)
       .then(res => {
         console.log(res.data);
         this.detail = res.data
