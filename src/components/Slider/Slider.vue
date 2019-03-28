@@ -21,7 +21,7 @@ export default {
  
 data () { 
     return { 
-       baseurl :'http://192.168.43.96:8085/XioMi',
+       baseurl :'http://192.168.1.103:8085/XiaoMi',
        imgList : []
    }
  
@@ -37,11 +37,11 @@ data () {
     // // this.imgList = result
     // console.log(result)
 //
-    axios.get('http://192.168.43.96:8085/img'+'/imglist')
+    axios.get('http://192.168.1.103:8085/XiaoMi/img/imglist')
       .then(res =>  {
         console.log(res.data);
         this.imgList = res.data
-        // console.log(imgList);
+        console.log(imgList);
       })
       
     

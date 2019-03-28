@@ -18,8 +18,8 @@
           <img  class="col_img " :src="baseurl+imgList[0].imgList[index].src" alt="" @click="godetail(imgList[0].imgList[index].id)">
             </router-link>
           <!-- <span>{{imgList[0].imgList[index].id}}</span> -->
-          <h6 > name:{{imgList[0].imgList[index].title}}</h6>
-          <h6 > name:{{imgList[0].imgList[index].price}}</h6>
+          <h6 > 商品名称:{{imgList[0].imgList[index].title}}</h6>
+          <h6 > 价格:{{imgList[0].imgList[index].price}}</h6>
           </div>
       </div>
     </div>
@@ -30,11 +30,11 @@
 import imgtest from '@/api/imglist.json'
 // import{mapState}from 'vuex'
 // import {reqImgList} from '@/api'
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   data () {
     return {
-      baseurl: 'http://192.168.43.96:8085/',
+      baseurl: 'http://192.168.1.103:8085/XiaoMi/',
       imgList: []
 
     }
@@ -43,14 +43,14 @@ export default {
   mounted () {
     console.log(imgtest)
     console.log(this.$store.state.testurl)
-    // this.$store.dispatch('getImgList')
-    // axios.get('http://192.168.43.96:8085/img/imglist')
-    //   .then(res => {
-    //     console.log(res.data)
-    //     this.imgList = res.data
-    //   })
+    this.$store.dispatch('getImgList')
+    axios.get('http://192.168.1.103:8085/XiaoMi/img/imglist')
+      .then(res => {
+        console.log(res.data)
+        this.imgList = res.data
+      })
     // 直接赋值
-    this.imgList = imgtest
+    // this.imgList = imgtest
   },
   methods: {
     godetail (id) {

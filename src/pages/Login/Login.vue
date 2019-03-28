@@ -48,7 +48,7 @@ export default {
       this.$router.replace(path)
     },
     UserLogin () {
-      const url = 'http://192.168.43.96:8085/useres/iflogin'
+      const url = 'http://192.168.1.103:8085/XiaoMi/useres/iflogin'
       var params = new URLSearchParams()
       params.append('username', this.UserName) // 你要传给后台的参数值 key/value
       params.append('password', this.Password)

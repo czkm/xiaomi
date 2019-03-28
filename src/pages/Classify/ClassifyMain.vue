@@ -43,7 +43,7 @@ import axios from 'axios'
 export default {
   data () {
     return { 
-     baseurl :'http://192.168.43.96:8085',//'http://134.175.86.105:8080/XiaoMi',
+     baseurl :'http://192.168.1.103:8085/XiaoMi',//'http://134.175.86.105:8080/XiaoMi',
      scrollY:0,//右侧滑动 y坐标
      tops:[], 
      classifyname:[],//存储商品
@@ -138,7 +138,7 @@ export default {
     },
     
     Ajaxcate(){
-     this.$axios.get('http://192.168.43.96:8085/img/cate')
+     this.$axios.get('http://192.168.1.103:8085/XiaoMi/img/cate')
       .then(res =>  {
         console.log(res.data);
         this.classifyname = res.data
@@ -146,7 +146,7 @@ export default {
       })
     },
     AjaxcateImg(){
-       axios.get('http://192.168.43.96:8085/img/cateImg')
+       axios.get('http://192.168.1.103:8085/XiaoMi/img/cateImg')
       .then(res =>  {
         console.log(res.data);
         this.classifyitem = res.data
